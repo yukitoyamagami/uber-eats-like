@@ -11,3 +11,4 @@ export const Foods = ({
       </p>
     </Fragment>
   )
+}
