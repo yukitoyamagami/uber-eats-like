@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import { LocalMallIcon } from '../components/Icons';
 import { FoodWrapper } from '../components/FoodWrapper';
+import { FoodOrderDialog } from '../components/FoodOrderDialog';
 import { Skeleton } from '@mui/material';
 import {
   initialState as foodsInitialState,
@@ -110,6 +111,17 @@ const [state, setState] = useState(initialState);
             )
         }
       </FoodsList>
+      {
+        state.isOpenOrderDialog &&
+          <FoodOrderDialog
+            food={state.selectedFood}
+            isOpen={state.isOpenOrderDialog}
+            onClose={() => setState({
+              ...state,
+              isOpenOrderDialog: false,
+            })}
+          />
+      }
     </Fragment>
   )
 }
