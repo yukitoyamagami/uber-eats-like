@@ -22,12 +22,6 @@ function App() {
         </Route>
         <Route
           exact
-          path="/foods"
-        >
-          <Foods />
-        </Route>
-        <Route
-          exact
           path="/orders">
           <Orders />
         </Route>
