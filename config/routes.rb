@@ -5,7 +5,7 @@ Rails.application.routes.draw do
         resources :foods, only: %i[index]
       end
       resources :line_foods, only: %i[index create] do
-        member do
+        collection do
           put :replace
         end
       end
